@@ -1,0 +1,6 @@
+.information_popup {
+  background: linear-gradient(92.85deg, #794eff 100%, #ffffff 25.02%),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}

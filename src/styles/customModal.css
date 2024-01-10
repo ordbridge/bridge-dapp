@@ -1,0 +1,238 @@
+/* The Modal (background) */
+.custom_modal {
+    /*display: none; /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 10;
+    /* Sit on top */
+    padding-top: 20vh;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    /* background-color: rgb(0, 0, 0); */
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.87);
+    /* background-color: #1A1A1A; */
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.custom_modal-content {
+    /* background-color: #fefefe; */
+    background-color: #794EFF33;
+
+    padding: 0.5rem 0.5rem;
+    padding-bottom: 1rem;
+    /* border: 1px solid #888; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    overflow-y: scroll;
+    max-height: 60vh;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    /* color: #484d56; */
+    color: #FFFFFF;
+    font-size: 48px;
+    /* float: right; */
+
+}
+
+.close:hover,
+.close:focus {
+    /* color: #000; */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.custom_modal_body {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.modal_address {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    text-align: center;
+    /* color: #000; */
+}
+
+
+.token_name {
+    font-size: 20px;
+    font-weight: 700;
+    /* color: #000; */
+    color: #B6B6B6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0.5rem 0.5rem;
+}
+
+.token_name img {
+    height: 30px;
+    width: 30px;
+}
+
+.token_name:hover {
+    border-radius: 10px;
+    background-color: #8e83fe33;
+}
+
+.token_name--active {
+    border-radius: 10px;
+    background-color: #8e83fe33;
+}
+
+.token_input {
+    width: 100%;
+    padding: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    /* background-color: rgba(255, 210, 0, 0.12); */
+}
+
+
+
+.confirm_modal {
+    width: 40%;
+    min-height: 20vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* min-width: 500px; */
+    position: relative;
+    /* background-color: #fefefe; */
+    /* background: #1A1A1A; */
+    background: linear-gradient(180deg, black 0%, #12031A 100%);
+    margin: auto;
+    padding: 1rem 2.5rem 0.5rem 2.5rem;
+    /* padding-bottom: 1rem; */
+    /* border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/*.flex div {*/
+/*    width: 42%;*/
+/*    margin-left: 5px;*/
+/*    margin-right: 5px;*/
+/*    margin-bottom: 1rem;*/
+/*}*/
+
+.confirm_modal_head {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.modal_head_gradient_text {
+    /* background: -webkit-linear-gradient(left, red , yellow);
+   background: -o-linear-gradient(right, red, yellow);
+   background: -moz-linear-gradient(right, red, yellow);
+   background: linear-gradient(to right, red , yellow); */
+    background: -webkit-linear-gradient(left, #794EFF, #d8cbff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.address_modal_description {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+
+.address_modal .confirm_modal {
+    width: 40%;
+}
+
+
+@media only screen and (max-width: 640px) {
+    .address_modal .confirm_modal {
+        width: 90%;
+    }
+
+    .modal_address {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .custom_modal-content {
+        width: 90%;
+    }
+
+    .confirm_modal_head>img {
+        height: 20px;
+    }
+
+    .confirm_modal_head {
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .address_modal_description {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 8px 0;
+    }
+}

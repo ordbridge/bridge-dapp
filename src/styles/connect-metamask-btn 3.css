@@ -1,0 +1,10 @@
+.connect-metamask-btn {
+  padding: 14px;
+  border: 1.5px solid #494949;
+  border-radius: 8px;
+  background: linear-gradient(88.62deg, #915dff 35%, #48ff9c 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

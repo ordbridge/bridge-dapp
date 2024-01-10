@@ -1,0 +1,41 @@
+.vault-page {
+  padding-top: 48px;
+}
+
+@media only screen and (min-width: 640px) {
+  .vault-left-half-container {
+    border-right: 1px solid transparent !important;
+    border-image: -webkit-linear-gradient(
+      top,
+      #915dff 0%,
+      #48ff9c 100% 100%
+    ) !important;
+    border-image-slice: 1 !important;
+  }
+}
+
+.move-to-vault {
+  border: 2px solid transparent;
+  border-image: -webkit-linear-gradient(left, #915dff 0%, #48ff9c 100% 100%);
+  border-image-slice: 1;
+  padding: 10px 16px;
+  font-weight: 600;
+}
+
+.vault-instructions-container {
+  border: 2px solid #494949;
+  border-radius: 8px;
+}
+
+.vault-instructions-container > li {
+  text-align: left;
+  padding: 16px 24px;
+}
+
+.create-vault-account-btn {
+  border: 2px solid transparent;
+  border-image: -webkit-linear-gradient(left, #915dff 0%, #48ff9c 100% 100%);
+  border-image-slice: 1;
+  padding: 10px 16px;
+  font-weight: 600;
+}

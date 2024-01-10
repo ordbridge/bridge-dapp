@@ -1,0 +1,65 @@
+.team-card-container {
+  /* background: #1c1c1c; */
+  margin: 0 32px;
+}
+
+.team-box {
+  width: 350px;
+}
+
+@media only screen and (max-width: 600px) {
+  .team-box {
+    width: 100% !important;
+  }
+}
+
+.team-name {
+  font-style: normal;
+  font-size: 24px;
+}
+
+.team-role {
+  font-size: 16px;
+  color: #D4E8FF;
+}
+
+.team-details {
+  width: 220px;
+  height: auto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  color: #D4E8FF;
+  text-align: left;
+}
+
+.team-img {
+  width: 220px;
+  max-height: 220px;
+}
+
+.frame-box {
+  --b: 2px;
+  /* thickness of the border */
+  --c: #f6851b;
+  /* color of the border */
+  --w: 18px;
+  /* width of border */
+  border: var(--b) solid transparent;
+  --g: #0000 90deg, var(--c) 0;
+  background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--g)) 0 0,
+    /* conic-gradient(from 180deg at top var(--b) right var(--b), var(--g)) 100% 0, */
+      /* conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--g)) 0 100%, */
+      conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--g)) 100% 100%;
+  background-size: var(--w) var(--w);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+
+.team-box:hover {
+  transform: scale(1.05, 1.05);
+}
+.what-secur3-text {
+  font-size: clamp(1em, 3vw, 1.3em);
+}

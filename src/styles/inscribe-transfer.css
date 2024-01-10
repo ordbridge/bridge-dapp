@@ -1,0 +1,34 @@
+.inscribe_container {
+    display: grid;
+    width: 100%;
+    place-items: center;
+}
+
+.inscribe_main {
+    min-height: 90%;
+    min-width: 50%;
+    padding: 3rem;
+    background-color: white;
+}
+
+.inscribe_header {
+    display: flex;
+}
+
+.inscribe_header > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1rem;
+}
+
+.inscribe_header .title {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.inscribe_content {
+    padding: 2rem 4rem;
+}
+

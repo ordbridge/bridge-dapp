@@ -1,0 +1,732 @@
+{
+  "version": "0.1.0",
+  "name": "ordo_brc",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        {
+          "name": "globalStateAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "configAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "changeConfig",
+      "accounts": [
+        {
+          "name": "globalStateAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "configAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": "ChangeConfigParams"
+          }
+        }
+      ]
+    },
+    {
+      "name": "pause",
+      "accounts": [
+        {
+          "name": "globalStateAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "resume",
+      "accounts": [
+        {
+          "name": "globalStateAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "createWrappedEntry",
+      "accounts": [
+        {
+          "name": "globalStateAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "wrappedMintAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "wrappedMetadataAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "wrappedStateAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenMetadataProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": "CreateWrappedEntryArgs"
+          }
+        }
+      ]
+    },
+    {
+      "name": "addUserPendingClaim",
+      "accounts": [
+        {
+          "name": "globalStateAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "wrappedMintAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "wrappedStateAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "userAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": "AddUserPendingClaimArgs"
+          }
+        }
+      ]
+    },
+    {
+      "name": "claimTokens",
+      "accounts": [
+        {
+          "name": "globalStateAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "configAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "wrappedMintAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "wrappedStateAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "userAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signerAta",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "adminAta",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "admin",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": "ClaimTokensArgs"
+          }
+        }
+      ]
+    },
+    {
+      "name": "burnTokens",
+      "accounts": [
+        {
+          "name": "globalStateAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "configAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "wrappedMintAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "wrappedStateAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "userAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signerAta",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "admin",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": "BurnTokensArgs"
+          }
+        }
+      ]
+    },
+    {
+      "name": "processBurn",
+      "accounts": [
+        {
+          "name": "globalStateAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "userAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": "ProcessBurnArgs"
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "GlobalState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "bridgedAssets",
+            "type": "u32"
+          },
+          {
+            "name": "tickerList",
+            "type": {
+              "vec": "string"
+            }
+          },
+          {
+            "name": "adminAuthority",
+            "type": "publicKey"
+          },
+          {
+            "name": "pause",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Config",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "burnFlatFee",
+            "type": "u64"
+          },
+          {
+            "name": "mintFlatFee",
+            "type": "u64"
+          },
+          {
+            "name": "mintPercentageFee",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WrappedStateAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "maxSupply",
+            "type": "u64"
+          },
+          {
+            "name": "ticker",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UserAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "pendingClaims",
+            "type": {
+              "vec": {
+                "defined": "PendingClaim"
+              }
+            }
+          },
+          {
+            "name": "burnEntries",
+            "type": {
+              "vec": {
+                "defined": "BurnEntry"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "ChangeConfigParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "newBurnFlatFee",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "newMintFlatFee",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "newMintPercentageFee",
+            "type": {
+              "option": "u8"
+            }
+          },
+          {
+            "name": "newAdmin",
+            "type": {
+              "option": "publicKey"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreateWrappedEntryArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "maxSupply",
+            "type": "u64"
+          },
+          {
+            "name": "decimals",
+            "type": "u8"
+          },
+          {
+            "name": "ticker",
+            "type": "string"
+          },
+          {
+            "name": "uri",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AddUserPendingClaimArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "solAddress",
+            "type": "publicKey"
+          },
+          {
+            "name": "ticker",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "identifier",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ClaimTokensArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "ticker",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BurnTokensArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "ticker",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "chain",
+            "type": "string"
+          },
+          {
+            "name": "crossChainAddress",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProcessBurnArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "solAddress",
+            "type": "publicKey"
+          },
+          {
+            "name": "uniqueId",
+            "type": "u16"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PendingClaim",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "ticker",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "identifier",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BurnEntry",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "chain",
+            "type": "string"
+          },
+          {
+            "name": "ticker",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "crossChainAddress",
+            "type": "string"
+          },
+          {
+            "name": "uniqueId",
+            "type": "u16"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidWrappedCreationArgs",
+      "msg": "decimals or ticker length is invalid"
+    },
+    {
+      "code": 6001,
+      "name": "MaxSupplySurpassed",
+      "msg": "Attempt to mint more than max supply of wrapped token"
+    },
+    {
+      "code": 6002,
+      "name": "NoPendingClaimFound",
+      "msg": "Pending Claim not Found"
+    },
+    {
+      "code": 6003,
+      "name": "NoBurnEntryFound",
+      "msg": "Attempt to redeem from a burn entry that is not found"
+    },
+    {
+      "code": 6004,
+      "name": "NotAuthorized",
+      "msg": "Not Authorized to perform this operation"
+    },
+    {
+      "code": 6005,
+      "name": "ClaimAlreadyRegistered",
+      "msg": "This Claim has already been registered"
+    },
+    {
+      "code": 6006,
+      "name": "ContractIsPaused",
+      "msg": "Contract is Paused"
+    },
+    {
+      "code": 6007,
+      "name": "TickerAlreadyMinted",
+      "msg": "Ticker has already been minted"
+    }
+  ],
+  "metadata": {
+    "address": "8jDEgU9LgLk5saNU6gihtHAhLags8dZy2fCF4gUcmhG4"
+  }
+}

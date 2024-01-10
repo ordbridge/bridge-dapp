@@ -1,0 +1,37 @@
+.team-card-container {
+  border: 1px solid transparent;
+  border-image: -webkit-linear-gradient(40deg, #F6851B 0%, #D7C1B3 100% 100%);
+  border-image-slice: 1;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.team-card-container:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.team-name {
+  font-style: normal;
+  font-size: 24px;
+}
+
+.team-role {
+  font-size: 12px;
+  color: lightgray;
+}
+
+.team-details {
+  width: 220px;
+  height: auto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  color: #d9d9d9;
+  text-align: left;
+}
+
+.team-img {
+  width: 220px;
+  height: auto;
+}
